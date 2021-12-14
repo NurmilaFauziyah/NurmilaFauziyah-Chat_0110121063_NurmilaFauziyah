@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chat</title>
+    <style>
+        #bodyChat{
+            border: 2px solid black;
+        }
+
+        ul {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #hasilChat{
+            height: 500px;
+
+        }
+
+        #ketikan{
+            display: flex;
+            padding: 5px;
+
+        }
+
+        #ketikPesan{
+            width: 93%;
+            height: 25px;
+            align-self: flex-end;
+        }
+
+        button {
+            width: 85px;
+            height: 30px;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div id="bodyChat">
+        <div id="hasilChat">
+            <ul id="kolomChat" style="list-style: none;"></ul>
+        </div>
+
+        <div id="ketikan">
+            <input id="ketikPesan" type="text">
+            <button onclick="kirim()" id="tombol">Kirim</button>
+        </div>
+    </div>
+
+    <script>
+        function kirim() {
+            const ketikPesan = document.getElementById('ketikPesan').value;
+            document.getElementById('kolomChat').innerHTML += `<li>${ketikPesan}</li>`;
+
+        }
+
+    </script>
+    
+</body>
+</html>
